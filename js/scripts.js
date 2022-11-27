@@ -3,13 +3,18 @@
 
 function PlaceList() {
   this.locations = {};
+  this.currentId = 0;
 }
 
 PlaceList.prototype.addLocationName = function(location) {
-  /*let placeName = location.id;
-  return placeName; */
+  location.id = this.assignId();
   this.locations[location.id] = location;
-}
+};
+
+PlaceList.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+};
 
 //Location Logic
 
@@ -19,8 +24,13 @@ function Location(city, country, year, landmark, notes) {
   this.year = year;
   this.landmark = landmark;
   this.notes = notes;
-  this.id = city + ", " + country;
 }
+
+Location.prototype.fullName = function() {
+  return this.city + ", " + this.country;
+};
+
+
 
 // let testLocation = new Location("Kigali", "Rwanda", 2013, "", "");
 // let testLocation2 = new Location("Tokyo", "Japan", 2017, "", "");
