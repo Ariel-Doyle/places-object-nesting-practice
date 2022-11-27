@@ -1,3 +1,4 @@
+// Co-authored by: Noah Cowan <nsncowan@gmail.com>
 //PlaceList Logic
 
 function PlaceList() {
@@ -22,4 +23,4 @@ function Location(city, country, year, landmark, notes) {
 }
 
 // let testLocation = new Location("Kigali", "Rwanda", 2013, "", "");
-// let testLocation2 = new Location("Tokyo", "Japan", 2017, "", "")
+// let testLocation2 = new Location("Tokyo", "Japan", 2017, "", "");
